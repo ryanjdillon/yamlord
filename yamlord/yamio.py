@@ -1,7 +1,7 @@
 import yaml
 from collections import OrderedDict
 
-def yamread(file_path, Loader=yaml.Loader, object_pairs_hook=OrderedDict):
+def read_yaml(file_path, Loader=yaml.Loader, object_pairs_hook=OrderedDict):
     '''Read YAML file and return as python dictionary'''
     # http://stackoverflow.com/a/21912744/943773
 
@@ -21,7 +21,7 @@ def yamread(file_path, Loader=yaml.Loader, object_pairs_hook=OrderedDict):
         return yaml.load(f, OrderedLoader)
 
 
-def yamwrite(data, out_path, Dumper=yaml.Dumper, **kwds):
+def write_yaml(data, out_path, Dumper=yaml.Dumper, **kwds):
     '''Write python dictionary to YAML'''
     import errno
     import os
